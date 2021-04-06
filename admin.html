@@ -3,13 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/admin.css">
 	<title>Admin</title>
 </head>
 <body>
-	<div class="wrapper">
-		<input type="text" placeholder="enter iframe...">
-		<input type="text" placeholder="enter title...">
+	<a href="./index.html">home</a>
+	<form class="admin-form">
+		<input id="iframeInput" type="text" placeholder="enter iframe..." required>
+		<input id="titleInput" type="text" placeholder="enter title..." required>
 		<select id="adminSelect"></select>
-	</div>
+		<button>add</button>
+	</form>
+
+<script src="./js/database.js"></script>
+<script src="./js/admin.js"></script>
 </body>
 </html>

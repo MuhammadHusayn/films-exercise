@@ -1,24 +1,3 @@
-// let films = [
-// 	{ title: 'Vue darsi', genre: 1, sourceLink: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZqgiuPt5QZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
-// 	{ title: 'Vue darsi', genre: 2, sourceLink: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZqgiuPt5QZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
-// 	{ title: 'Vue darsi', genre: 3, sourceLink: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZqgiuPt5QZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
-// 	{ title: 'Vue darsi', genre: 1, sourceLink: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZqgiuPt5QZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
-// 	{ title: 'Vue darsi', genre: 4, sourceLink: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZqgiuPt5QZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
-// ]
-
-let genres = [
-	{ id: 1, genre: 'comedy' },
-	{ id: 2, genre: 'horror' },
-	{ id: 3, genre: 'sci-fi' },
-	{ id: 4, genre: 'documentary' },
-]
-
-// window.localStorage.setItem('data', JSON.stringify(films))
-
-let films = window.localStorage.getItem('data')
-if(!films) films = []
-else films = JSON.parse(films)
-
 let filterSelect = document.querySelector("#filterSelect")
 let filmsList = document.querySelector(".films-list")
 let form = document.querySelector("form")
@@ -68,7 +47,6 @@ function filterFilms(array, genreKey) {
 	}
 	return trash
 }
-
 
 form.addEventListener('submit', event => {
 	event.preventDefault()
